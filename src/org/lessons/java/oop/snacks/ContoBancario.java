@@ -11,4 +11,9 @@ public class ContoBancario {
         this.balance = BigDecimal.ZERO;
     }
 
+    public void setWithdrawMoney(BigDecimal money) {
+        if (money != null && money.compareTo(BigDecimal.ZERO) > 0 && this.balance.compareTo(money) >= 0) {
+            this.balance.subtract(money);
+        }
+    }
 }
