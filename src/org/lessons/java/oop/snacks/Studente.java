@@ -28,4 +28,14 @@ public class Studente {
             this.age = newAge;
         }
     }
+
+    public String getInfos() {
+
+        if (this.firstname != null && this.lastname != null && this.age >= 3 && this.age <= 130) {
+            String infos = String.format("%s %s, %d anni", this.firstname, this.lastname, this.age);
+            return infos;
+        }
+
+        return null;
+    }
 }
