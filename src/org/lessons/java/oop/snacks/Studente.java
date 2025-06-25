@@ -22,4 +22,10 @@ public class Studente {
                 && newLastname.trim().matches("[a-zA-ZàèéìòùÀÈÉÌÒÙ' ]+"))
             this.lastname = newLastname.trim();
     }
+
+    public void setAge(int newAge) {
+        if (newAge >= 3 && newAge <= 130) {
+            this.age = newAge;
+        }
+    }
 }
