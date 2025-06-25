@@ -22,4 +22,9 @@ public class ContoBancario {
             this.balance = this.balance.add(money);
         }
     }
+
+    public BigDecimal getBalance() {
+        return this.balance;
+    }
+    
 }
