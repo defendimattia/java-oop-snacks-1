@@ -10,4 +10,16 @@ public class Studente {
         this.lastname = lastname;
         this.age = age;
     }
+
+    public void setFirstname(String newFirstname) {
+        if (newFirstname != null && !newFirstname.trim().isEmpty()
+                && newFirstname.trim().matches("[a-zA-ZàèéìòùÀÈÉÌÒÙ' ]+"))
+            this.firstname = newFirstname.trim();
+    }
+
+    public void setLastname(String newLastname) {
+        if (newLastname != null && !newLastname.trim().isEmpty()
+                && newLastname.trim().matches("[a-zA-ZàèéìòùÀÈÉÌÒÙ' ]+"))
+            this.lastname = newLastname.trim();
+    }
 }
