@@ -16,7 +16,22 @@ public class RegistroStudenti {
         }
     }
 
-    public int getStudenti() {
-        return studenti.size();
+    public void getStudenti() {
+        if (studenti.isEmpty()) {
+            System.out.println("Nessuno studente presente.");
+            return;
+        }
+
+        String output = "Registro studenti: ";
+
+        for (int i = 0; i < studenti.size(); i++) {
+            if (i < studenti.size() - 1) {
+                output += String.format("%s; ", studenti.get(i).getInfos());
+            } else {
+                output += String.format("%s", studenti.get(i).getInfos());
+            }
+        }
+
+        System.out.println(output);
     }
 }
